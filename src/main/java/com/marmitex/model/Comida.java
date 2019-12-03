@@ -1,14 +1,13 @@
 package com.marmitex.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-
+//@Entity
 public class Comida {
+
     @Id
-    @GeneratedValue()
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private Integer id;
 
     @Column(name = "COMIDA", nullable = false)
@@ -17,9 +16,6 @@ public class Comida {
     @Column(name = "INGREDIENTE")
     private Ingrediente ingrediente;
 
-    @Column(name = "TIPO_COMIDA")
-    private String tipoComida;
-
-    @Column(name = "STATUS_COMIDA")
+    @Column(name = "INATIVO")
     private String inativo;
 }
