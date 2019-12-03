@@ -1,8 +1,14 @@
 package com.marmitex.model;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import lombok.Data;
 
-//@Entity
+import javax.persistence.*;
+import java.util.List;
+
+@Data
+@Entity
+@Table(name = "COMIDAS")
 public class Comida {
 
     @Id
@@ -13,8 +19,9 @@ public class Comida {
     @Column(name = "COMIDA", nullable = false)
     private String comida;
 
-    @Column(name = "INGREDIENTE")
-    private Ingrediente ingrediente;
+    @JsonManagedReference
+    @OneToMany(mappedBy = "comida", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ComidaIngrediente> ingredientesList;
 
     @Column(name = "INATIVO")
     private String inativo;
