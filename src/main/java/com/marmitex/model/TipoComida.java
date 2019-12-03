@@ -1,19 +1,21 @@
 package com.marmitex.model;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import lombok.Data;
 
+import javax.persistence.*;
+
+@Entity
+@Data
+@Table(name = "TIPO")
 public class TipoComida {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID")
-    private Long id;
+    private Integer id;
 
-    @Column(name = "ID_COMIDA")
-    private Long id_comida;
+    @Column(name = "TIPO_COMIDA", length = 100, nullable = false)
+    private String tipoComida;
 
-    @Column(name = "ID_TIPO")
-    private Long id_tipo;
+    @Column(name = "INATIVO")
+    private boolean inativo = false;
 }

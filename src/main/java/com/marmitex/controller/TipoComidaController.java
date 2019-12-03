@@ -4,8 +4,16 @@ import com.marmitex.framework.CrudRestController;
 import com.marmitex.framework.CrudService;
 import com.marmitex.model.TipoComida;
 import com.marmitex.service.TipoComidaService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
-public class TipoComidaController extends CrudRestController<TipoComida, Long> {
+import java.util.List;
+
+@RestController
+@RequestMapping("tipo-comida")
+public class TipoComidaController extends CrudRestController<TipoComida, Integer> {
 
     private final TipoComidaService tipoComidaService;
 
@@ -14,7 +22,8 @@ public class TipoComidaController extends CrudRestController<TipoComida, Long> {
     }
 
     @Override
-    public CrudService<TipoComida, Long> getService() {
+    public CrudService<TipoComida, Integer> getService() {
         return tipoComidaService;
     }
+
 }

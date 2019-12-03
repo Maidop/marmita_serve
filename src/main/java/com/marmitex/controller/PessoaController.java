@@ -5,7 +5,7 @@ import com.marmitex.framework.CrudService;
 import com.marmitex.model.Pessoa;
 import com.marmitex.service.PessoaService;
 
-public class PessoaController extends CrudRestController<Pessoa, Long> {
+public class PessoaController extends CrudRestController<Pessoa, Integer> {
 
     private final PessoaService pessoaService;
 
@@ -14,7 +14,7 @@ public class PessoaController extends CrudRestController<Pessoa, Long> {
     }
 
     @Override
-    public CrudService<Pessoa, Long> getService() {
+    public CrudService<Pessoa, Integer> getService() {
         return pessoaService;
     }
 }
