@@ -24,5 +24,5 @@ public class Comida {
     private List<ComidaIngrediente> ingredientesList;
 
     @Column(name = "INATIVO")
-    private String inativo;
+    private boolean inativo;
 }
