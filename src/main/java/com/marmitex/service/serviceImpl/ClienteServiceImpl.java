@@ -9,13 +9,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ClienteServiceImpl extends CrudServiceImpl<Cliente, Integer> implements ClienteService {
+public class ClienteServiceImpl extends CrudServiceImpl<Cliente, Long> implements ClienteService {
 
     @Autowired
     private ClienteData clienteData;
 
     @Override
-    public JpaRepository<Cliente, Integer> getRepository() {
+    public JpaRepository<Cliente, Long> getRepository() {
         return clienteData;
     }
 }
