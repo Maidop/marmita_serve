@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("comida")
-public class ComidaController extends CrudRestController<Comida, Integer> {
+public class ComidaController extends CrudRestController<Comida, Long> {
 
     private  ComidaService comidaService;
 
@@ -18,7 +18,7 @@ public class ComidaController extends CrudRestController<Comida, Integer> {
     }
 
     @Override
-    public CrudService<Comida, Integer> getService() {
+    public CrudService<Comida, Long> getService() {
         return comidaService;
     }
 }

@@ -5,5 +5,5 @@ import com.marmitex.model.Comida;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface ComidaService extends CrudService<Comida, Integer> {
+public interface ComidaService extends CrudService<Comida, Long> {
 }
