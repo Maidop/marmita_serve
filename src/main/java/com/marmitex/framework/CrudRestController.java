@@ -15,8 +15,8 @@ public abstract class CrudRestController<T, ID> {
         return getService().findAll();
     }
 
-    @GetMapping("{id}")
-    public Optional<T> findById(@PathVariable("id") ID id) {
+    @GetMapping("{query}")
+    public Optional<T> findById(@PathVariable("query") ID id) {
         return getService().findById(id);
     }
 
@@ -25,8 +25,8 @@ public abstract class CrudRestController<T, ID> {
         return getService().save(entity);
     }
 
-    @DeleteMapping("{id}")
-    public void delete(@PathVariable("id") ID id) {
+    @DeleteMapping("{query}")
+    public void delete(@PathVariable("query") ID id) {
         getService().delete(id);
     }
 

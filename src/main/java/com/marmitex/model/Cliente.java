@@ -1,4 +1,4 @@
 package com.marmitex.model;
 
-public class Pessoa {
+public class Cliente {
 }
