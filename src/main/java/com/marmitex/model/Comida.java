@@ -1,18 +1,25 @@
 package com.marmitex.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
-@Entity
+
 public class Comida {
-    Código da Comida: Campo not null – tipo Integer – Campo sequencial único.
-            Comida – Campo not null – tipo Varchar – tamanho 100.
-    Ingredientes: Campo obrigatório – tipo Lista. Será realizado a busca e vinculo no cadastro de ingredientes, podem selecionar quantos forem necessários.
-    Tipo de Comida: Campo obrigatório – tipo Lista. Será realizado a busca e vinculo no cadastro de ingredientes, podem selecionar quantos forem necessários.
-    Inativo – Campo desmarcado por default – tipo checkbox.
-
+    @Id
+    @GeneratedValue()
     private Integer id;
+
+    @Column(name = "COMIDA", nullable = false)
     private String comida;
-    private Ingrediente ingredientes;
-    private String comida;
-    private String comida;
+
+    @Column(name = "INGREDIENTE")
+    private Ingrediente ingrediente;
+
+    @Column(name = "TIPO_COMIDA")
+    private String tipoComida;
+
+    @Column(name = "STATUS_COMIDA")
+    private String inativo;
 }
