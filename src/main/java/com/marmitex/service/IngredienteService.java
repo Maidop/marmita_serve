@@ -1,4 +1,7 @@
 package com.marmitex.service;
 
-public interface IngredienteService {
+import com.marmitex.framework.CrudService;
+import com.marmitex.model.Ingrediente;
+
+public interface IngredienteService extends CrudService<Ingrediente, Long> {
 }

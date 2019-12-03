@@ -1,4 +1,7 @@
 package com.marmitex.service;
 
-public interface PessoaService {
+import com.marmitex.framework.CrudService;
+import com.marmitex.model.Pessoa;
+
+public interface PessoaService extends CrudService<Pessoa, Long> {
 }

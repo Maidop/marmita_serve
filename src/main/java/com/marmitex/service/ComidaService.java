@@ -1,4 +1,7 @@
 package com.marmitex.service;
 
-public interface ComidaService {
+import com.marmitex.framework.CrudService;
+import com.marmitex.model.Comida;
+
+public interface ComidaService extends CrudService<Comida, Long> {
 }
