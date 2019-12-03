@@ -2,10 +2,10 @@ package com.marmitex.controller;
 
 import com.marmitex.framework.CrudRestController;
 import com.marmitex.framework.CrudService;
-import com.marmitex.model.Comida;
 import com.marmitex.model.Detestada;
+import com.marmitex.service.DetestadaService;
 
-public class DetestadasController<DetestadaService> extends CrudRestController<Detestada, Long> {
+public class DetestadasController extends CrudRestController<Detestada, Long> {
 
     private final DetestadaService detestadaService;
 
@@ -14,7 +14,7 @@ public class DetestadasController<DetestadaService> extends CrudRestController<D
     }
 
     @Override
-    public CrudService<Comida, Long> getService() {
+    public CrudService<Detestada, Long> getService() {
         return detestadaService;
     }
 
