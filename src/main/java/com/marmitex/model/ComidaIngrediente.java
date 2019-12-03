@@ -12,7 +12,7 @@ public class ComidaIngrediente {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @JsonBackReference
     @ManyToOne(optional = false)
