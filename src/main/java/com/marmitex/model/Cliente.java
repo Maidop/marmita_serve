@@ -28,8 +28,8 @@ public class Cliente {
     @Column(name = "CEP", nullable = false, length = 8)
     private String cep;
 
-    @Column(name = "LONGADOURO", nullable = false, length = 100)
-    private String logadouro;
+    @Column(name = "LOGRADOURO", nullable = false, length = 100)
+    private String logradouro;
 
     @Column(name = "NUMERO", nullable = false)
     private Integer numero;
