@@ -1,4 +1,4 @@
-package com.marmitex.Marmitex;
+package com.marmitex;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
