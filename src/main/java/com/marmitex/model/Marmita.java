@@ -11,7 +11,7 @@ public class Marmita {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Column(name = "PESO_MARMITA")
     private Double peso;
