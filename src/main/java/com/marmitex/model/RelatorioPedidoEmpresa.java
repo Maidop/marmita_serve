@@ -6,8 +6,4 @@ import lombok.Data;
 
 public class RelatorioPedidoEmpresa {
 
-    private Pedido pedido;
-    private Comida comida;
-
-
 }
