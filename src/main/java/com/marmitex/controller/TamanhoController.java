@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("marmita")
+@RequestMapping("tamanho")
 public class TamanhoController extends CrudRestController<Tamanho, Long> {
 
     private final TamanhoService tamanhoService;
