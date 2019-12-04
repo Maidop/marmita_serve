@@ -2,9 +2,7 @@ package com.marmitex.service.serviceImpl;
 
 import com.marmitex.data.PedidoData;
 import com.marmitex.framework.CrudServiceImpl;
-import com.marmitex.model.Marmita;
 import com.marmitex.model.Pedido;
-import com.marmitex.service.MarmitaService;
 import com.marmitex.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;

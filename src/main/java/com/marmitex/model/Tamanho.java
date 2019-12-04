@@ -1,5 +1,6 @@
 package com.marmitex.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -7,11 +8,12 @@ import javax.persistence.*;
 @Data
 @Entity
 @Table(name = "TAMANHOS")
-public class Marmita {
+public class Tamanho {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @JsonManagedReference
+    private Long id;
 
     @Column(name = "PESO_MARMITA")
     private Double peso;

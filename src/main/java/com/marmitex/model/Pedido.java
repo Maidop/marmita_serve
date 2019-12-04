@@ -1,9 +1,13 @@
 package com.marmitex.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 @Data
 @Entity
@@ -16,8 +20,9 @@ public class Pedido {
     private Long id ;
 
     @Column(name = "DATA")
-    private Date data;
+    private LocalDate data;
 
-    @Column(name = "QUANTIDADE")
-    private Integer quantidade;
+    @JsonManagedReference
+    @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<TamanhoPedido> tamanhoPedidoList = new ArrayList<>();
 }
