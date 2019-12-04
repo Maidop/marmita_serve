@@ -16,6 +16,9 @@ public class Cliente {
     @Column(name = "NOME", nullable = false, length = 100)
     private String nome;
 
+    @Column(name = "ADMIN", nullable = false)
+    private String admin;
+
     @Column(name = "CPF", nullable = false, length = 11)
     private String cpf;
 

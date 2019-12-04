@@ -1,6 +1,5 @@
 package com.marmitex.model;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -12,7 +11,6 @@ public class Tamanho {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @JsonManagedReference
     private Long id;
 
     @Column(name = "PESO_MARMITA")
