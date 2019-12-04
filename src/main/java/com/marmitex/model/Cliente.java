@@ -17,7 +17,7 @@ public class Cliente {
     private String nome;
 
     @Column(name = "ADMIN", nullable = false)
-    private String admin;
+    private boolean admin;
 
     @Column(name = "CPF", nullable = false, length = 11)
     private String cpf;
