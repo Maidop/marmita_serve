@@ -14,11 +14,6 @@ public class ComidaIngrediente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @JsonBackReference
-    @ManyToOne(optional = false)
-    @JoinColumn(name = "ID_COMIDA")
-    private Comida comida;
-
     @ManyToOne(optional = false)
     @JoinColumn(name = "ID_INGREDIENTES")
     private Ingrediente ingrediente;
