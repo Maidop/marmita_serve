@@ -1,7 +1,11 @@
 package com.marmitex.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Entity
+@Data
 @Table(name = "COMIDA_TIPO")
 public class TipoComida {
 
@@ -9,9 +13,9 @@ public class TipoComida {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "ID_COMIDA", nullable = false)
+    @OneToOne
     private Comida id_comida;
 
-    @Column(name = "ID_TIPO", nullable = false)
+    @OneToOne
     private Tipo id_tipo;
 }
