@@ -1,8 +1,11 @@
 package com.marmitex.model;
 
+import lombok.Data;
+
 import javax.persistence.*;
 
 @Entity
+@Data
 @Table(name = "COMIDA_TIPO")
 public class TipoComida {
 
@@ -11,8 +14,8 @@ public class TipoComida {
     private Long id;
 
     @Column(name = "ID_COMIDA", nullable = false)
-    private Comida id_comida;
+    private Comida comida;
 
     @Column(name = "ID_TIPO", nullable = false)
-    private Tipo id_tipo;
+    private Tipo tipo;
 }
