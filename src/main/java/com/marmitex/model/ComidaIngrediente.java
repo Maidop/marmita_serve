@@ -15,6 +15,6 @@ public class ComidaIngrediente {
     private Long id;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "ID_INGREDIENTES")
+    @JoinColumn(name = "ID_INGREDIENTES", referencedColumnName = "id")
     private Ingrediente ingrediente;
 }
