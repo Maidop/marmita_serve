@@ -2,6 +2,7 @@ package com.marmitex.model;
 
 import javax.persistence.*;
 
+@Entity
 @Table(name = "COMIDA_TIPO")
 public class TipoComida {
 
