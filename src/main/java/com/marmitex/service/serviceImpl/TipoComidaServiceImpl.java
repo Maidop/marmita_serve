@@ -2,6 +2,7 @@ package com.marmitex.service.serviceImpl;
 
 import com.marmitex.data.TipoComidaData;
 import com.marmitex.framework.CrudServiceImpl;
+import com.marmitex.model.Tipo;
 import com.marmitex.model.TipoComida;
 import com.marmitex.service.TipoComidaService;
 import org.springframework.beans.factory.annotation.Autowired;
