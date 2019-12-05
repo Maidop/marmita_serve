@@ -23,6 +23,10 @@ public class Comida {
     @OneToMany(mappedBy = "comida", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ComidaIngrediente> ingredientesList;
 
+    @JsonManagedReference
+    @OneToMany(mappedBy = "comida", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Tipo> tipoList;
+
     @Column(name = "INATIVO")
     private boolean inativo;
 }

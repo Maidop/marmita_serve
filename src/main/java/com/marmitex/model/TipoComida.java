@@ -13,9 +13,9 @@ public class TipoComida {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @OneToOne
-    private Comida id_comida;
+    @Column(name = "ID_COMIDA", nullable = false)
+    private Comida comida;
 
-    @OneToOne
-    private Tipo id_tipo;
+    @Column(name = "ID_TIPO", nullable = false)
+    private Tipo tipo;
 }
