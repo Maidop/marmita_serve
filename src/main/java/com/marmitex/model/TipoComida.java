@@ -13,9 +13,11 @@ public class TipoComida {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "ID_COMIDA", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "ID_COMIDA", referencedColumnName = "id")
     private Comida comida;
 
-    @Column(name = "ID_TIPO", nullable = false)
+    @OneToOne
+    @JoinColumn(name = "ID_TIPO", referencedColumnName = "id")
     private Tipo tipo;
 }
