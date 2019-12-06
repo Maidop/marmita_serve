@@ -34,4 +34,7 @@ public class Pedido {
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<TamanhoPedido> tamanhoPedidoList = new ArrayList<>();
 
+    @OneToMany
+    private Cliente cliente;
+
 }
