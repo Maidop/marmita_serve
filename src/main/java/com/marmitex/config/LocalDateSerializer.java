@@ -18,7 +18,7 @@ public class LocalDateSerializer extends JsonSerializer<LocalDate> {
     }
 
     public String toString(LocalDate value) {
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
         return value.format(formatter);
     }
 
