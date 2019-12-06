@@ -1,5 +1,6 @@
 package com.marmitex.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -13,11 +14,12 @@ public class TipoComida {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "ID_COMIDA", referencedColumnName = "id")
+    @JsonBackReference
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "ID_COMIDA")
     private Comida comida;
 
-    @OneToOne
+    @OneToOne(optional = false)
     @JoinColumn(name = "ID_TIPO", referencedColumnName = "id")
     private Tipo tipo;
 }

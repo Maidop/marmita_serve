@@ -18,4 +18,9 @@ public class ClienteServiceImpl extends CrudServiceImpl<Cliente, Long> implement
     public JpaRepository<Cliente, Long> getRepository() {
         return clienteData;
     }
+
+    @Override
+    public Cliente findBycpf(String cpf) {
+        return clienteData.findBycpf(cpf);
+    }
 }
