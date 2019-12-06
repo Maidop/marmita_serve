@@ -64,7 +64,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                         .password(passwordEncoder().encode("pass"))
                         .roles("ADMIN"));
 
-        auth.
     }
 
 }
